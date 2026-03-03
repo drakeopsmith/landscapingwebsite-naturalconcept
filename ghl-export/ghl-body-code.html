@@ -3,131 +3,136 @@
 <!-- ═══════════════════════════════════════════════ -->
 
 <script>
-    (function () {
-        "use strict";
+(function() {
+  "use strict";
 
-        // Data
-        const WHY_DATA = [
-            { icon: "award", title: "Expert Arborists", desc: "Owner Ivan Sanchez has years of hands-on experience with Santa Barbara's diverse tree species. Every cut is intentional, every tree treated with care." },
-            { icon: "shield", title: "Safety First", desc: "Fully licensed and insured with proper safety equipment for every job. We protect your property, your family, and our crew on every project." },
-            { icon: "users", title: "Owner on Every Job", desc: "Ivan personally oversees every project from start to finish. No subcontractors, no surprises — just consistent, quality tree care." },
-            { icon: "eye", title: "Aesthetic Eye", desc: "We don't just cut trees — we sculpt them. Ivan has a natural eye for how a tree should grow, balancing health with beauty." },
-            { icon: "calendar-check", title: "Prompt & Reliable", desc: "We show up on time, communicate clearly, and leave your property cleaner than we found it. Every single time." },
-            { icon: "badge-check", title: "Licensed & Insured", desc: "Fully licensed with comprehensive liability insurance and workers' comp. Your property and our crew are protected on every job." }
-        ];
-        const PROCESS_DATA = [
-            { num: "01", icon: "compass", title: "Free Assessment", desc: "We visit your property, inspect your trees, identify any hazards or health issues, and provide a detailed estimate — no strings attached." },
-            { num: "02", icon: "sparkles", title: "Custom Plan", desc: "Based on the assessment, we create a tailored care plan that addresses your trees' specific needs — trimming, removal, or restoration." },
-            { num: "03", icon: "tree-pine", title: "Expert Execution", desc: "Our experienced crew handles the work safely and efficiently, using professional-grade equipment. We keep you informed at every step." },
-            { num: "04", icon: "leaf", title: "Clean & Complete", desc: "We haul away all debris, rake the area, and leave your property spotless. Your trees are healthier and your view is restored." }
-        ];
-        const SERVICES_DATA = [
-            { title: "Tree Trimming & Pruning", desc: "Precision trimming that promotes healthy growth and enhances your tree's natural beauty. We handle everything from delicate ornamental pruning to large canopy reduction.", img: "nc-tree-trimming.jpg", tags: ["Crown Thinning", "Shape & Structure", "Health Pruning"] },
-            { title: "Tree Removal", desc: "Safe, efficient removal of dead, dangerous, or unwanted trees. Our crew handles complex removals near structures, power lines, and tight spaces with precision.", img: "nc-tree-removal.jpg", tags: ["Hazard Trees", "Tight-Space Removal", "Complete Cleanup"] },
-            { title: "View Clearing & Restoration", desc: "Unlock your ocean, mountain, and city views with strategic trimming and selective removal. We maximize your views while preserving the beauty and privacy of your landscape.", img: "nc-view-clearing.jpg", tags: ["Ocean Views", "Mountain Views", "Strategic Thinning"] },
-            { title: "Stump Grinding & Cleanup", desc: "Complete stump removal that eliminates tripping hazards and frees up space in your yard. We grind below grade and fill the area for a clean, level finish.", img: "nc-stump.jpg", tags: ["Below-Grade Grinding", "Root Removal", "Area Restoration"] }
-        ];
-        const TESTIMONIALS_DATA = [
-            { name: "Anna Khaja", role: "Google Review · 5★", content: "Very happy with Ivan and his crew. They did a BEAUTIFUL job trimming and cabling our oaks. We'll be calling you again, Ivan. Thank you!", project: "Oak Trimming & Cabling" },
-            { name: "Shelley Garvey", role: "Google Review · 5★", content: "Ivan and his crew were able to highlight the exterior landscaping in such a creative manner that benefitted my home's online photos in a totally new way. Now, motorists can see what's for sale when they drive by!", project: "View Clearing for Home Sale" },
-            { name: "Stephanie A Patterson", role: "Google Review · 5★", content: "We were very very very pleased to have Ivan and his crew clean out a 50 foot juniper safely and esthetically perfectly. They did equally an amazing job opening up our view. I recommend without reservation and will call Ivan back for next tree work.", project: "Juniper Cleanup & View Restoration" },
-            { name: "Julissa Valerjev", role: "Google Review · 5★", content: "Excellent tree trimming crew. Ivan has an eye for how a tree should grow and gives much attention to details. Friendly and easy to get a quote. Left my yard clean too. I highly recommend Natural Concept Tree Care if you want a job done right.", project: "Tree Trimming" }
-        ];
-        const FAQS_DATA = [
-            { q: "How quickly can you start my tree work?", a: "We typically schedule assessments within 48 hours, and most projects begin within 1-2 weeks of approval. For emergency situations like storm damage, we can often respond same-day." },
-            { q: "Do you handle permits for tree removal?", a: "Yes. Many Santa Barbara neighborhoods and the city require permits for tree removal. We'll handle the permit process and ensure all local regulations are followed." },
-            { q: "Can you help me clear my ocean or mountain view?", a: "Absolutely! View clearing is one of our specialties. We strategically trim and thin trees to maximize your views while preserving the beauty and privacy of your landscape." },
-            { q: "Are you licensed and insured?", a: "Yes. Natural Concept Tree Care is fully licensed and carries comprehensive general liability insurance and workers' compensation. Your property and our crew are fully protected." },
-            { q: "What areas do you serve?", a: "We serve Santa Barbara, Montecito, Goleta, Carpinteria, Hope Ranch, Summerland, and surrounding communities throughout the Santa Barbara region." },
-            { q: "Do you offer free estimates?", a: "Absolutely! We provide free on-site tree assessments for all projects. Give us a call at (805) 689-9543 or fill out our contact form, and we'll schedule a time to inspect your trees." }
-        ];
-        const AREAS = ["Santa Barbara", "Montecito", "Goleta", "Carpinteria", "Hope Ranch", "Summerland", "Isla Vista", "Mission Canyon", "San Roque"];
+  (function () {
+          "use strict";
+  
+          // Data
+          const WHY_DATA = [
+              { icon: "award", title: "Expert Arborists", desc: "Owner Ivan Sanchez has years of hands-on experience with Santa Barbara's diverse tree species. Every cut is intentional, every tree treated with care." },
+              { icon: "shield", title: "Safety First", desc: "Fully licensed and insured with proper safety equipment for every job. We protect your property, your family, and our crew on every project." },
+              { icon: "users", title: "Owner on Every Job", desc: "Ivan personally oversees every project from start to finish. No subcontractors, no surprises — just consistent, quality tree care." },
+              { icon: "eye", title: "Aesthetic Eye", desc: "We don't just cut trees — we sculpt them. Ivan has a natural eye for how a tree should grow, balancing health with beauty." },
+              { icon: "calendar-check", title: "Prompt & Reliable", desc: "We show up on time, communicate clearly, and leave your property cleaner than we found it. Every single time." },
+              { icon: "badge-check", title: "Licensed & Insured", desc: "Fully licensed with comprehensive liability insurance and workers' comp. Your property and our crew are protected on every job." }
+          ];
+          const PROCESS_DATA = [
+              { num: "01", icon: "compass", title: "Free Assessment", desc: "We visit your property, inspect your trees, identify any hazards or health issues, and provide a detailed estimate — no strings attached." },
+              { num: "02", icon: "sparkles", title: "Custom Plan", desc: "Based on the assessment, we create a tailored care plan that addresses your trees' specific needs — trimming, removal, or restoration." },
+              { num: "03", icon: "tree-pine", title: "Expert Execution", desc: "Our experienced crew handles the work safely and efficiently, using professional-grade equipment. We keep you informed at every step." },
+              { num: "04", icon: "leaf", title: "Clean & Complete", desc: "We haul away all debris, rake the area, and leave your property spotless. Your trees are healthier and your view is restored." }
+          ];
+          const SERVICES_DATA = [
+              { title: "Tree Trimming & Pruning", desc: "Precision trimming that promotes healthy growth and enhances your tree's natural beauty. We handle everything from delicate ornamental pruning to large canopy reduction.", img: "nc-tree-trimming.jpg", tags: ["Crown Thinning", "Shape & Structure", "Health Pruning"] },
+              { title: "Tree Removal", desc: "Safe, efficient removal of dead, dangerous, or unwanted trees. Our crew handles complex removals near structures, power lines, and tight spaces with precision.", img: "nc-tree-removal.jpg", tags: ["Hazard Trees", "Tight-Space Removal", "Complete Cleanup"] },
+              { title: "View Clearing & Restoration", desc: "Unlock your ocean, mountain, and city views with strategic trimming and selective removal. We maximize your views while preserving the beauty and privacy of your landscape.", img: "nc-view-clearing.jpg", tags: ["Ocean Views", "Mountain Views", "Strategic Thinning"] },
+              { title: "Stump Grinding & Cleanup", desc: "Complete stump removal that eliminates tripping hazards and frees up space in your yard. We grind below grade and fill the area for a clean, level finish.", img: "nc-stump.jpg", tags: ["Below-Grade Grinding", "Root Removal", "Area Restoration"] }
+          ];
+          const TESTIMONIALS_DATA = [
+              { name: "Anna Khaja", role: "Google Review · 5★", content: "Very happy with Ivan and his crew. They did a BEAUTIFUL job trimming and cabling our oaks. We'll be calling you again, Ivan. Thank you!", project: "Oak Trimming & Cabling" },
+              { name: "Shelley Garvey", role: "Google Review · 5★", content: "Ivan and his crew were able to highlight the exterior landscaping in such a creative manner that benefitted my home's online photos in a totally new way. Now, motorists can see what's for sale when they drive by!", project: "View Clearing for Home Sale" },
+              { name: "Stephanie A Patterson", role: "Google Review · 5★", content: "We were very very very pleased to have Ivan and his crew clean out a 50 foot juniper safely and esthetically perfectly. They did equally an amazing job opening up our view. I recommend without reservation and will call Ivan back for next tree work.", project: "Juniper Cleanup & View Restoration" },
+              { name: "Julissa Valerjev", role: "Google Review · 5★", content: "Excellent tree trimming crew. Ivan has an eye for how a tree should grow and gives much attention to details. Friendly and easy to get a quote. Left my yard clean too. I highly recommend Natural Concept Tree Care if you want a job done right.", project: "Tree Trimming" }
+          ];
+          const FAQS_DATA = [
+              { q: "How quickly can you start my tree work?", a: "We typically schedule assessments within 48 hours, and most projects begin within 1-2 weeks of approval. For emergency situations like storm damage, we can often respond same-day." },
+              { q: "Do you handle permits for tree removal?", a: "Yes. Many Santa Barbara neighborhoods and the city require permits for tree removal. We'll handle the permit process and ensure all local regulations are followed." },
+              { q: "Can you help me clear my ocean or mountain view?", a: "Absolutely! View clearing is one of our specialties. We strategically trim and thin trees to maximize your views while preserving the beauty and privacy of your landscape." },
+              { q: "Are you licensed and insured?", a: "Yes. Natural Concept Tree Care is fully licensed and carries comprehensive general liability insurance and workers' compensation. Your property and our crew are fully protected." },
+              { q: "What areas do you serve?", a: "We serve Santa Barbara, Montecito, Goleta, Carpinteria, Hope Ranch, Summerland, and surrounding communities throughout the Santa Barbara region." },
+              { q: "Do you offer free estimates?", a: "Absolutely! We provide free on-site tree assessments for all projects. Give us a call at (805) 689-9543 or fill out our contact form, and we'll schedule a time to inspect your trees." }
+          ];
+          const AREAS = ["Santa Barbara", "Montecito", "Goleta", "Carpinteria", "Hope Ranch", "Summerland", "Isla Vista", "Mission Canyon", "San Roque"];
+  
+          // Render dynamic sections
+          function renderCards() {
+              // Why cards
+              document.getElementById('whyCards').innerHTML = WHY_DATA.map(d => `<div class="card fade-up"><div class="card-icon"><i data-lucide="${d.icon}" style="width:28px;height:28px;stroke-width:1.5"></i></div><h3>${d.title}</h3><p>${d.desc}</p></div>`).join('');
+              // Process cards
+              document.getElementById('processCards').innerHTML = PROCESS_DATA.map((d, i) => `<div class="process-card fade-up"><span class="process-num">${d.num}</span><div style="position:relative;z-index:1"><div class="process-icon"><i data-lucide="${d.icon}" style="width:32px;height:32px;stroke-width:1.5"></i></div><h3 style="font-size:1.5rem;font-style:italic;margin-bottom:1rem">${d.title}</h3><p style="color:rgba(18,31,18,.5);line-height:1.6">${d.desc}</p></div>${i < 3 ? '<div style="display:none" class="arrow-hint"><i data-lucide="arrow-right" style="width:24px;height:24px;color:rgba(18,31,18,.1)"></i></div>' : ''}</div>`).join('');
+              // Service cards
+              document.getElementById('serviceCards').innerHTML = SERVICES_DATA.map(d => `<div class="service-item fade-up"><div class="service-img-wrap"><img src="${d.img}" alt="${d.title}" referrerpolicy="no-referrer" loading="lazy"/><div class="service-img-overlay"></div></div><div class="service-header"><div><h3>${d.title}</h3><p>${d.desc}</p><div class="service-tags">${d.tags.map(t => `<span class="tag"><i data-lucide="check-circle-2" style="width:12px;height:12px"></i> ${t}</span>`).join('')}</div></div><a href="#contact" aria-label="Get a quote for ${d.title}" class="service-arrow"><i data-lucide="arrow-right" style="width:20px;height:20px;stroke-width:1"></i></a></div></div>`).join('');
+              // Testimonials
+              document.getElementById('testimonialCards').innerHTML = TESTIMONIALS_DATA.map(d => `<div class="testimonial fade-up"><div class="quote-icon"><i data-lucide="quote" style="width:40px;height:40px;stroke-width:1"></i></div><blockquote>"${d.content}"</blockquote><div class="testimonial-footer"><div class="testimonial-author"><div class="author-avatar">${d.name[0]}</div><div><p class="author-name">${d.name}</p><p class="author-role" style="display:flex;align-items:center;gap:.3rem"><svg viewBox="0 0 24 24" width="10" height="10" style="flex-shrink:0"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg> ${d.role}</p></div></div><span class="project-tag">${d.project}</span></div></div>`).join('');
+              // Areas
+              document.getElementById('areaTags').innerHTML = AREAS.map(a => `<span class="area-tag"><i data-lucide="map-pin" style="width:16px;height:16px"></i> ${a}</span>`).join('');
+              // FAQs
+              document.getElementById('faqList').innerHTML = FAQS_DATA.map((d, i) => `<div class="faq-item${i === 0 ? ' open' : ''}" onclick="toggleFaq(this)"><button class="faq-btn" aria-expanded="${i === 0}"><span>${d.q}</span><div class="faq-chevron"><i data-lucide="chevron-down" style="width:20px;height:20px;stroke-width:1"></i></div></button><div class="faq-answer"><p>${d.a}</p></div></div>`).join('');
+              // Re-render Lucide icons
+              lucide.createIcons();
+          }
+  
+          window.toggleFaq = function (el) {
+              const wasOpen = el.classList.contains('open');
+              document.querySelectorAll('.faq-item').forEach(f => { f.classList.remove('open'); f.querySelector('.faq-btn').setAttribute('aria-expanded', 'false') });
+              if (!wasOpen) { el.classList.add('open'); el.querySelector('.faq-btn').setAttribute('aria-expanded', 'true') }
+          }
+  
+          // Form handler — sends to FormSubmit.co → drakeopsmith@gmail.com
+          window.handleFormSubmit = function (e) {
+              e.preventDefault();
+              var form = document.getElementById('contactForm');
+              var success = document.getElementById('formSuccess');
+              var btn = form.querySelector('button[type="submit"]');
+              var originalText = btn.textContent;
+              btn.textContent = 'Sending...';
+              btn.disabled = true;
+  
+              var formData = new FormData(form);
+              formData.append('_subject', 'New Lead from Natural Concept Tree Care Website');
+              formData.append('_template', 'table');
+              formData.append('_captcha', 'false');
+  
+              fetch('https://formsubmit.co/ajax/drakeopsmith@gmail.com', {
+                  method: 'POST',
+                  headers: { 'Accept': 'application/json' },
+                  body: formData
+              })
+                  .then(function (response) { return response.json(); })
+                  .then(function (data) {
+                      form.style.display = 'none';
+                      success.style.display = 'block';
+                  })
+                  .catch(function (error) {
+                      btn.textContent = originalText;
+                      btn.disabled = false;
+                      alert('Something went wrong. Please call us at (805) 689-9543 instead.');
+                  });
+          }
+  
+          // Scroll effects
+          function initScroll() {
+              const nav = document.getElementById('navbar');
+              const bar = document.getElementById('stickyBar');
+              const heroBg = document.getElementById('heroBg');
+              window.addEventListener('scroll', () => {
+                  const y = window.scrollY;
+                  nav.classList.toggle('scrolled', y > 50);
+                  bar.classList.toggle('show', y > 600);
+                  if (heroBg) heroBg.style.transform = 'scale(1.1) translateY(' + y * 0.4 + 'px)';
+              }, { passive: true });
+          }
+  
+          // Intersection Observer for fade-in
+          function initAnimations() {
+              const obs = new IntersectionObserver((entries) => {
+                  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target) } });
+              }, { threshold: 0.1, rootMargin: '-50px' });
+              document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+          }
+  
+          // Init
+          document.addEventListener('DOMContentLoaded', () => {
+              var yearEl = document.getElementById('footerYear');
+              if (yearEl) yearEl.textContent = new Date().getFullYear();
+              renderCards();
+              initScroll();
+              setTimeout(initAnimations, 100);
+          });
+  
+      })();
 
-        // Render dynamic sections
-        function renderCards() {
-            // Why cards
-            document.getElementById('whyCards').innerHTML = WHY_DATA.map(d => `<div class="card fade-up"><div class="card-icon"><i data-lucide="${d.icon}" style="width:28px;height:28px;stroke-width:1.5"></i></div><h3>${d.title}</h3><p>${d.desc}</p></div>`).join('');
-            // Process cards
-            document.getElementById('processCards').innerHTML = PROCESS_DATA.map((d, i) => `<div class="process-card fade-up"><span class="process-num">${d.num}</span><div style="position:relative;z-index:1"><div class="process-icon"><i data-lucide="${d.icon}" style="width:32px;height:32px;stroke-width:1.5"></i></div><h3 style="font-size:1.5rem;font-style:italic;margin-bottom:1rem">${d.title}</h3><p style="color:rgba(18,31,18,.5);line-height:1.6">${d.desc}</p></div>${i < 3 ? '<div style="display:none" class="arrow-hint"><i data-lucide="arrow-right" style="width:24px;height:24px;color:rgba(18,31,18,.1)"></i></div>' : ''}</div>`).join('');
-            // Service cards
-            document.getElementById('serviceCards').innerHTML = SERVICES_DATA.map(d => `<div class="service-item fade-up"><div class="service-img-wrap"><img src="${d.img}" alt="${d.title}" referrerpolicy="no-referrer" loading="lazy"/><div class="service-img-overlay"></div></div><div class="service-header"><div><h3>${d.title}</h3><p>${d.desc}</p><div class="service-tags">${d.tags.map(t => `<span class="tag"><i data-lucide="check-circle-2" style="width:12px;height:12px"></i> ${t}</span>`).join('')}</div></div><a href="#contact" aria-label="Get a quote for ${d.title}" class="service-arrow"><i data-lucide="arrow-right" style="width:20px;height:20px;stroke-width:1"></i></a></div></div>`).join('');
-            // Testimonials
-            document.getElementById('testimonialCards').innerHTML = TESTIMONIALS_DATA.map(d => `<div class="testimonial fade-up"><div class="quote-icon"><i data-lucide="quote" style="width:40px;height:40px;stroke-width:1"></i></div><blockquote>"${d.content}"</blockquote><div class="testimonial-footer"><div class="testimonial-author"><div class="author-avatar">${d.name[0]}</div><div><p class="author-name">${d.name}</p><p class="author-role">${d.role}</p></div></div><span class="project-tag">${d.project}</span></div></div>`).join('');
-            // Areas
-            document.getElementById('areaTags').innerHTML = AREAS.map(a => `<span class="area-tag"><i data-lucide="map-pin" style="width:16px;height:16px"></i> ${a}</span>`).join('');
-            // FAQs
-            document.getElementById('faqList').innerHTML = FAQS_DATA.map((d, i) => `<div class="faq-item${i === 0 ? ' open' : ''}" onclick="toggleFaq(this)"><button class="faq-btn" aria-expanded="${i === 0}"><span>${d.q}</span><div class="faq-chevron"><i data-lucide="chevron-down" style="width:20px;height:20px;stroke-width:1"></i></div></button><div class="faq-answer"><p>${d.a}</p></div></div>`).join('');
-            // Re-render Lucide icons
-            lucide.createIcons();
-        }
-
-        window.toggleFaq = function (el) {
-            const wasOpen = el.classList.contains('open');
-            document.querySelectorAll('.faq-item').forEach(f => { f.classList.remove('open'); f.querySelector('.faq-btn').setAttribute('aria-expanded', 'false') });
-            if (!wasOpen) { el.classList.add('open'); el.querySelector('.faq-btn').setAttribute('aria-expanded', 'true') }
-        }
-
-        // Form handler — sends to FormSubmit.co → drakeopsmith@gmail.com
-        window.handleFormSubmit = function (e) {
-            e.preventDefault();
-            var form = document.getElementById('contactForm');
-            var success = document.getElementById('formSuccess');
-            var btn = form.querySelector('button[type="submit"]');
-            var originalText = btn.textContent;
-            btn.textContent = 'Sending...';
-            btn.disabled = true;
-
-            var formData = new FormData(form);
-            formData.append('_subject', 'New Lead from Natural Concept Tree Care Website');
-            formData.append('_template', 'table');
-            formData.append('_captcha', 'false');
-
-            fetch('https://formsubmit.co/ajax/drakeopsmith@gmail.com', {
-                method: 'POST',
-                headers: { 'Accept': 'application/json' },
-                body: formData
-            })
-                .then(function (response) { return response.json(); })
-                .then(function (data) {
-                    form.style.display = 'none';
-                    success.style.display = 'block';
-                })
-                .catch(function (error) {
-                    btn.textContent = originalText;
-                    btn.disabled = false;
-                    alert('Something went wrong. Please call us at (805) 689-9543 instead.');
-                });
-        }
-
-        // Scroll effects
-        function initScroll() {
-            const nav = document.getElementById('navbar');
-            const bar = document.getElementById('stickyBar');
-            const heroBg = document.getElementById('heroBg');
-            window.addEventListener('scroll', () => {
-                const y = window.scrollY;
-                nav.classList.toggle('scrolled', y > 50);
-                bar.classList.toggle('show', y > 600);
-                if (heroBg) heroBg.style.transform = 'scale(1.1) translateY(' + y * 0.4 + 'px)';
-            }, { passive: true });
-        }
-
-        // Intersection Observer for fade-in
-        function initAnimations() {
-            const obs = new IntersectionObserver((entries) => {
-                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target) } });
-            }, { threshold: 0.1, rootMargin: '-50px' });
-            document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-        }
-
-        // Init
-        document.addEventListener('DOMContentLoaded', () => {
-            var yearEl = document.getElementById('footerYear');
-            if (yearEl) yearEl.textContent = new Date().getFullYear();
-            renderCards();
-            initScroll();
-            setTimeout(initAnimations, 100);
-        });
-
-    })();
+})();
 </script>

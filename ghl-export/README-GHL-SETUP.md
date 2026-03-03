@@ -28,13 +28,13 @@
 2. Select your website/funnel
 3. Click **"+ Add New Page"**
 4. Choose **"Blank"** template
-5. Name it: `Verdant Scapes | Premium Landscaping in Santa Barbara & Montecito`
+5. Name it: `Natural Concept Tree Care — Santa Barbara's Premier Tree Service`
 
 ### Step 2: Configure Page Settings
 
 1. Click the **⚙️ gear icon** (top right) to open Page Settings
 2. Under **General**:
-   - Set the **page title**: `Verdant Scapes | Premium Landscaping in Santa Barbara & Montecito`
+   - Set the **page title**: `Natural Concept Tree Care — Santa Barbara's Premier Tree Service`
    - Set the **meta description** from the source site
    - Set the **URL path/slug**
 

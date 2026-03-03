@@ -14,6 +14,7 @@
 
 <!-- Site Styles (Scoped to prevent GHL conflicts) -->
 <style>
+
     :root {
         --brand-primary: #1a2f23;
         --brand-accent: #386641;
@@ -410,6 +411,17 @@
         color: var(--brand-primary)
     }
 
+    @media(max-width:767px) {
+        .mobile-toggle {
+            opacity: 1;
+            pointer-events: auto
+        }
+
+        .navbar.scrolled .mobile-toggle {
+            color: var(--brand-primary)
+        }
+    }
+
     @media(min-width:768px) {
         .mobile-toggle {
             display: none
@@ -489,20 +501,27 @@
     .hero .stars {
         display: flex;
         gap: 2px;
-        color: var(--brand-accent)
+        color: #d4a017
     }
 
     .hero .rating-row {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         gap: .75rem;
-        margin-bottom: 1.5rem
+        margin-bottom: 2rem;
+        padding: .75rem 1.5rem;
+        background: rgba(255, 255, 255, .1);
+        border: 1px solid rgba(255, 255, 255, .2);
+        border-radius: 9999px;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px)
     }
 
     .hero .rating-text {
-        color: rgba(255, 255, 255, .6);
-        font-size: .875rem;
-        font-weight: 700
+        color: rgba(255, 255, 255, .9);
+        font-size: 1rem;
+        font-weight: 700;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, .3)
     }
 
     .hero h1 {
@@ -566,20 +585,30 @@
     }
 
     .phone-circle {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 4.5rem;
+        height: 4.5rem;
         border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, .2);
-        backdrop-filter: blur(12px);
+        background: var(--brand-accent);
+        border: none;
+        box-shadow: 0 0 0 0 rgba(56, 102, 65, .5);
+        animation: phonePulse 2s ease-in-out infinite;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all .5s
+        transition: all .5s;
+        flex-shrink: 0
+    }
+
+    @keyframes phonePulse {
+        0% { box-shadow: 0 0 0 0 rgba(56, 102, 65, .5) }
+        70% { box-shadow: 0 0 0 14px rgba(56, 102, 65, 0) }
+        100% { box-shadow: 0 0 0 0 rgba(56, 102, 65, 0) }
     }
 
     .phone-cta:hover .phone-circle {
-        background: var(--brand-accent);
-        border-color: var(--brand-accent)
+        background: #4a8a55;
+        animation: none;
+        box-shadow: 0 0 20px rgba(56, 102, 65, .4)
     }
 
     .phone-label {
@@ -591,9 +620,12 @@
     }
 
     .phone-number {
-        font-size: 1.5rem;
+        font-size: clamp(1.75rem, 3.5vw, 2.75rem);
         font-family: var(--font-serif);
-        font-style: italic
+        font-style: italic;
+        font-weight: 500;
+        letter-spacing: .02em;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, .25)
     }
 
     .scroll-indicator {
@@ -603,6 +635,82 @@
         transform: translateX(-50%);
         color: rgba(255, 255, 255, .3);
         animation: bounce 2s infinite
+    }
+
+    /* ── Mobile Hero Fixes ── */
+    @media(max-width:767px) {
+        .hero {
+            height: auto;
+            min-height: 100vh;
+            min-height: 100dvh;
+            padding: 6rem 0 5rem;
+            align-items: flex-start
+        }
+
+        .hero-content {
+            padding-top: 1rem
+        }
+
+        .hero .rating-row {
+            margin-bottom: 1.25rem;
+            padding: .5rem 1rem;
+            font-size: .85rem
+        }
+
+        .hero .rating-text {
+            font-size: .8rem
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 10vw, 3.5rem);
+            margin-bottom: 1rem
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5
+        }
+
+        .hero-actions {
+            gap: 1rem;
+            width: 100%
+        }
+
+        .cta-primary {
+            width: 100%;
+            justify-content: center;
+            padding: 1.25rem 2rem;
+            font-size: .9rem
+        }
+
+        .phone-cta {
+            width: 100%;
+            padding: 1rem 1.5rem 1rem 1rem;
+            background: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .2);
+            border-radius: 9999px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px)
+        }
+
+        .phone-circle {
+            width: 3.5rem;
+            height: 3.5rem
+        }
+
+        .phone-number {
+            font-size: 1.5rem
+        }
+
+        .phone-label {
+            font-size: .6rem;
+            opacity: .7
+        }
+
+        .scroll-indicator {
+            display: none
+        }
     }
 
     /* Section shared */
@@ -1001,7 +1109,7 @@
     .stars-row .stars {
         display: flex;
         gap: 2px;
-        color: var(--brand-accent)
+        color: #d4a017
     }
 
     .stars-summary {
@@ -1486,9 +1594,9 @@
 
     .sticky-bar a {
         flex: 1;
-        padding: 1rem;
+        padding: 1.1rem;
         font-weight: 700;
-        font-size: .85rem;
+        font-size: .9rem;
         text-transform: uppercase;
         letter-spacing: .1em;
         border-radius: .75rem;
@@ -1497,7 +1605,8 @@
 
     .sticky-bar .bar-call {
         background: var(--brand-accent);
-        color: #fff
+        color: #fff;
+        flex: 1.2
     }
 
     .sticky-bar .bar-est {
@@ -1542,4 +1651,5 @@
         position: relative;
         z-index: 10
     }
+
 </style>
