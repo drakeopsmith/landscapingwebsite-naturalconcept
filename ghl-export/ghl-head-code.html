@@ -292,22 +292,32 @@
         font-weight: 700;
         letter-spacing: -.05em;
         color: #fff;
-        transition: color .5s
+        transition: all .5s;
+        opacity: 0;
+        transform: translateX(-20px)
     }
 
     .navbar.scrolled .nav-logo {
-        color: var(--brand-primary)
+        color: var(--brand-primary);
+        opacity: 1;
+        transform: translateX(0)
     }
 
     .nav-logo-img {
         height: 120px;
         width: auto;
         object-fit: contain;
-        transition: all .5s
+        transition: all .5s;
+        opacity: 0;
+        transform: scale(0.8);
+        pointer-events: none
     }
 
     .navbar.scrolled .nav-logo-img {
-        height: 72px
+        height: 72px;
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: auto
     }
 
     .nav-links {
