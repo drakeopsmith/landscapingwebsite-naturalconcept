@@ -1082,7 +1082,9 @@
         background: var(--brand-primary);
         color: #fff;
         position: relative;
-        overflow: hidden
+        overflow: hidden;
+        width: 100%;
+        max-width: 100vw
     }
 
     .contact-bg {
@@ -1163,15 +1165,18 @@
 
     .form-card {
         background: #fff;
-        padding: 2.5rem;
-        border-radius: 3rem;
+        padding: 1.5rem;
+        border-radius: 2rem;
         color: var(--brand-primary);
-        box-shadow: 0 25px 50px rgba(0, 0, 0, .25)
+        box-shadow: 0 25px 50px rgba(0, 0, 0, .25);
+        max-width: 100%;
+        overflow: hidden
     }
 
     @media(min-width:768px) {
         .form-card {
-            padding: 3.5rem
+            padding: 3.5rem;
+            border-radius: 3rem
         }
     }
 
@@ -1216,15 +1221,26 @@
     .form-group select,
     .form-group textarea {
         width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
         padding: 1rem 0;
         background: transparent;
         border: none;
         border-bottom: 2px solid rgba(18, 31, 18, .1);
         font-family: var(--font-serif);
-        font-size: 1.25rem;
+        font-size: 1rem;
         font-style: italic;
         transition: border-color .3s;
         outline: none
+    }
+
+    @media(min-width:768px) {
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            font-size: 1.25rem
+        }
     }
 
     .form-group input:focus,
