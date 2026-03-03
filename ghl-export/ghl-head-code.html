@@ -314,7 +314,7 @@
     }
 
     .navbar.scrolled .nav-logo-img {
-        height: 72px;
+        height: 40px;
         opacity: 1;
         transform: scale(1);
         pointer-events: auto
@@ -328,7 +328,17 @@
 
     @media(min-width:768px) {
         .nav-links {
-            display: flex
+            display: flex;
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+            transition: all .5s
+        }
+
+        .navbar.scrolled .nav-links {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto
         }
     }
 
@@ -362,7 +372,14 @@
         border-radius: 9999px;
         background: #fff;
         color: var(--brand-primary);
-        transition: all .5s
+        transition: all .5s;
+        opacity: 0;
+        pointer-events: none
+    }
+
+    .navbar.scrolled .nav-cta {
+        opacity: 1;
+        pointer-events: auto
     }
 
     .nav-cta:hover {
@@ -382,10 +399,14 @@
     .mobile-toggle {
         display: block;
         color: #fff;
-        transition: color .5s
+        transition: all .5s;
+        opacity: 0;
+        pointer-events: none
     }
 
     .navbar.scrolled .mobile-toggle {
+        opacity: 1;
+        pointer-events: auto;
         color: var(--brand-primary)
     }
 
